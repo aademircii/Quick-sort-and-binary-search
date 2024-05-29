@@ -32,13 +32,13 @@ def binary_search(arr, x, start_index = 0, end_index = None):
     midpoint = (start_index + end_index) // 2
     
     if x == arr[midpoint]:
-        return f"Aradığınız elemanın sıralannmış listedeki indeksi:{midpoint}'dir "
+        return f"The index of searched element is:{midpoint}"
     if x < arr[midpoint]:
         return binary_search(arr, x, start_index, midpoint - 1)
     if x > arr[midpoint]:
         return binary_search(arr, x, midpoint + 1, end_index)
 #sample use
-liste = [2,75,61,58,44,80,1,31,56,17,89]
-quicksort(liste, 0, len(liste)-1)    
-print(binary_search(liste, 80, 0, None))
-print(f"Sıralanmış liste:{liste}")
+list = [2,75,61,58,44,80,1,31,56,17,89]
+quicksort(list, 0, len(list)-1)    
+print(binary_search(list, 80, 0, None))
+print(f"Sorted list:{list}")
